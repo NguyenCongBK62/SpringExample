@@ -1,0 +1,43 @@
+package net.codejava.contact.dao;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+
+class ContactDAOTest {
+	private DriverManagerDataSource dataSource;
+	private ContactDAO dao;
+
+	@Test
+	void testSave() {
+		dataSource = new DriverManagerDataSource();
+		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
+		dataSource.setUrl("jdbc:mysql://localhost:3306/contactdb");
+		dataSource.setUsername("root");
+		dataSource.setPassword("");
+		
+		dao = new ContactDAOImpl(dataSource);
+	}
+
+	@Test
+	void testUpdate() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGet() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testDelete() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testList() {
+		fail("Not yet implemented");
+	}
+
+}
